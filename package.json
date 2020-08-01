@@ -1,0 +1,66 @@
+{
+  "name": "@iter-tools/collections",
+  "version": "1.0.0",
+  "description": "es6-style collections",
+  "main": "lib/index.cjs",
+  "module": "lib/index.mjs",
+  "types": "lib/index.d.ts",
+  "exports": {
+    "import": "./lib/index.mjs",
+    "require": "./lib/index.cjs"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "format": "prettier --write '**/*.{js,md}'",
+    "lint": "eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ],
+    "*.md": [
+      "prettier -c"
+    ]
+  },
+  "keywords": [
+    "iterator",
+    "iterable",
+    "collection",
+    "List",
+    "Map",
+    "Set",
+    "Queue",
+    "extend"
+  ],
+  "repository": "git@github.com:iter-tools/set.git",
+  "author": "Conrad Buck <conartist6@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "@iter-tools/list": "^1.0.1",
+    "@iter-tools/map": "^1.0.2",
+    "@iter-tools/queue": "^1.5.1",
+    "@iter-tools/set": "^1.0.1"
+  }
+}
